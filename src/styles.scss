@@ -22,7 +22,9 @@ html, body {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     font-family: 'Poppins';
     background-color: black;
     color: $white;

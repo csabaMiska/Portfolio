@@ -1,10 +1,44 @@
 @use './styles.scss' as styles;
 @forward './styles.scss';
 
-// Objects - placeing
+// Objects - positioning
 @mixin dFlex($jc: center, $ai: center, $fd: row) {
     display: flex;
     justify-content: $jc;
     align-items: $ai;
     flex-direction: $fd;
+}
+
+// Fonts - Size & Weight
+@mixin fontStyle($ff: 'Poppins', $fs, $fw, $fc) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $fc;
+}
+
+//Buttons Style
+@mixin primaryBtn($w, $h, $hw, $hh) {
+    width: $w;
+    height: $h;
+    background-color: styles.$green;
+    padding: 15px 30px 15px 30px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        cursor: pointer;
+        transition: width 200ms ease-out, height 200ms ease-out;
+        width: $hw;
+        height: $hh;
+        background-color: styles.$purple;
+    }
+}
+
+@mixin navLinkImg() {
+    width: 30px;
+    &:hover {
+        animation: 300ms ease-out;
+        transform: scale(1.6);
+    }
 }

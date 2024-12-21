@@ -2,19 +2,16 @@
 
 footer {
     @include dFlex($jc: space-between);
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 1440px;
     height: 291px;
     background-color: $dark_blue;
-    color: $white;
     border-top: solid 4px $green;
         div {
             margin-left: 100px;
                 h1 {
-                    color: $white;
-                    font-size: 32px;
-                    font-weight: bold;
+                    @include fontStyle($fs: 32px, $fw: bold, $fc: $white);
                     letter-spacing: 2px; 
                         &:hover {
                             cursor: pointer;
@@ -23,8 +20,7 @@ footer {
                 }
 
                 p {
-                    font-size: 16px;
-                    font-weight: 400;
+                    @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
                         &:hover {
                             cursor: pointer;
                             text-decoration: underline 2px solid $light_blue;
@@ -35,8 +31,7 @@ footer {
 }
 
 span {
-    font-size: 23px;
-    font-weight: 400;
+    @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
 }
 
 nav {
@@ -44,10 +39,6 @@ nav {
     margin-right: 100px;
     gap: 42px;
         img {
-            width: 30px;
-            &:hover {
-                animation: 300ms ease-in;
-                transform: scale(1.6);
-            }
+            @include navLinkImg();
         }
 }

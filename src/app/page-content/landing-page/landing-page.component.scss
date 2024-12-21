@@ -1,3 +1,149 @@
-div {
+@use '../../../mixins.scss' as *;
+
+.content {
+    width: 1440px;
+    height: 100vh;
     margin-top: 109px;
+    background-color: $dark_blue;
+}
+
+.hero_container {
+    @include dFlex($jc: space-between);
+    width: 100%;
+    height: 100%;
+}
+
+.hero_img {
+    @include dFlex();
+    width: 70%;
+    height: 100%;
+    margin-top: 160px;
+
+    .purple_shadow {
+        width: 100%;
+        height: 100%;
+        background-image: url('../../../assets/img/desing_elements/purple_shadow_landing_page.png');
+        background-repeat: no-repeat;
+        background-position: -30% -20%;
+    }
+
+    .green_shadow {
+        width: 100%;
+        height: 100%;
+        background-image: url('../../../assets/img/desing_elements/green_shadow_landing_page.png');
+        background-repeat: no-repeat;
+        background-position: 110% -10%;
+    }
+
+    .profile_img {
+        position: absolute;
+        top: 80px;
+        width: 600px;
+        height: 705px;
+    }
+
+    .profile_cut {
+        position: absolute;
+        top: 572px;
+        width: 600px;
+        z-index: 300;
+    }
+}
+
+.hero_titel_container {
+    @include dFlex($jc: start, $ai: start, $fd: column);
+    height: 100%;
+    width: 70%;
+    padding-top: 188px;
+    margin-left: -160px;
+
+    .hero_titel {
+        @include dFlex($jc: start);
+
+        span {
+            @include fontStyle($fs: 64px, $fw: 400, $fc: $white);
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            margin-right: 24px;
+        }
+    }
+}
+
+.titel {
+    @include dFlex($fd: column, $ai: start);
+
+    h1 {
+        @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
+        margin-top: -12px;
+    }
+
+    p {
+        @include fontStyle($fs: 58px, $fw: 400, $fc: $purple);
+        margin-top: -32px;
+    }
+
+}
+
+.hero_btn_container {
+    @include dFlex();
+    width: 100%;
+    margin-top: 44px;
+    position: relative;
+    z-index: 200;
+
+    button {
+        @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+        @include primaryBtn($w: 165px, $h: 58px, $hw: 185px, $hh: 68px);
+    }
+}
+
+.dark_blue_element {
+    @include dFlex($jc: space-between, $ai: end);
+    height: 100%;
+    width: 1440px;
+    position: absolute;
+    top: 109px;
+    z-index: 100;
+    background-image: url('../../../assets/img/desing_elements/vector_landing_page.png');
+    background-repeat: no-repeat;
+    background-position: 0 -140%;
+}
+
+nav {
+    @include dFlex();
+    gap: 42px;
+    height: 280px;
+
+    div {
+        width: 100px;
+        height: 4px;
+        background-color: $purple;
+    }
+
+    img {
+        @include navLinkImg();
+    }
+
+    a {
+        @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+        text-decoration: none;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}
+
+.scroll_down_container {
+    @include dFlex();
+    height: 400px;
+    span {
+        @include dFlex();
+        @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+        writing-mode: vertical-lr;
+        transform: rotate(0deg);
+        gap: 7px;
+        margin-right: 96px;
+    }
+
 }
