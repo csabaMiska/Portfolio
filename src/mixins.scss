@@ -1,6 +1,7 @@
-@use './styles.scss' as *;
+@use './styles.scss' as styles;
+@forward './styles.scss';
 
-// Placeing
+// Objects - placeing
 @mixin dFlex($jc: center, $ai: center, $fd: row) {
     display: flex;
     justify-content: $jc;

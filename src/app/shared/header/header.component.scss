@@ -1,0 +1,40 @@
+@use '../../../mixins.scss' as *;
+
+header {
+    @include dFlex($jc: space-between);
+    position: fixed;
+    top: 0;
+    height: 109px;
+    width: 1440px;
+    background-color: $dark_blue;
+        a {
+            text-decoration: none;
+                h1 {
+                    margin-left: 100px;
+                    color: $white;
+                    font-size: 32px;
+                    font-weight: bold;
+                    letter-spacing: 2px; 
+                        &:hover {
+                            cursor: pointer;
+                            color: $green;
+                        }
+                    }
+        }
+}
+
+nav {
+    @include dFlex();
+    margin-right: 100px;
+    gap: 29px;
+        a {
+            text-decoration: none;
+            color: $white;
+            font-size: 23px;
+            font-weight: 400;
+                &:hover {
+                    cursor: pointer;
+                    color: $green;
+                }
+        }
+}
