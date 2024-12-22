@@ -2,7 +2,7 @@
 
 .content {
     width: 1440px;
-    height: 100vh;
+    height: 900px;
     margin-top: 109px;
     background-color: $dark_blue;
 }
@@ -24,7 +24,7 @@
         height: 100%;
         background-image: url('../../../assets/img/desing_elements/purple_shadow_landing_page.png');
         background-repeat: no-repeat;
-        background-position: -30% -20%;
+        background-position: -30% -10%;
     }
 
     .green_shadow {
@@ -89,7 +89,7 @@
     width: 100%;
     margin-top: 44px;
     position: relative;
-    z-index: 200;
+    z-index: 500;
 
     button {
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
@@ -99,20 +99,20 @@
 
 .dark_blue_element {
     @include dFlex($jc: space-between, $ai: end);
-    height: 100%;
-    width: 1440px;
     position: absolute;
-    top: 109px;
-    z-index: 100;
+    height: 700px;
+    width: $base_width;
+    top: 350px;
+    z-index: 300;
     background-image: url('../../../assets/img/desing_elements/vector_landing_page.png');
     background-repeat: no-repeat;
-    background-position: 0 -140%;
+    
 }
 
 nav {
     @include dFlex();
     gap: 42px;
-    height: 280px;
+    height: 320px;
 
     div {
         width: 100px;
@@ -136,7 +136,7 @@ nav {
 
 .scroll_down_container {
     @include dFlex();
-    height: 400px;
+    height: 480px;
     span {
         @include dFlex();
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);

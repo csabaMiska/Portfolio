@@ -13,6 +13,7 @@
     padding-left: 100px;
     width: 471px;
     gap: 35px;
+
     h1 {
         @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
     }
@@ -22,8 +23,10 @@
     @include dFlex($ai: start);
     margin-left: 35px;
     gap: 35px;
+
     img {
         width: 50px;
+
         &:hover {
             cursor: pointer;
             transition: transform 200ms ease-out;
@@ -49,12 +52,18 @@
     }
 }
 
-.purple_shadow {
+.shadow_container {
+    @include dFlex($jc:end);
+    width: $base_width;
     position: absolute;
     z-index: 600;
-    height: 120%;
-    width: $base_width;
+}
+
+.purple_shadow {
+    width: 400px;
+    height: 700px;
+    margin-top: -240px;
     background-image: url('../../../assets/img/desing_elements/purple_shadow_about_me.png');
     background-repeat: no-repeat;
-    background-position: 160% -5%;
+    background-position: -20% 30%;
 }
