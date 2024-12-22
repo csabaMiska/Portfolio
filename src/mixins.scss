@@ -38,7 +38,8 @@
 @mixin navLinkImg() {
     width: 30px;
     &:hover {
-        animation: 300ms ease-out;
-        transform: scale(1.6);
+        cursor: pointer;
+        transition: transform 300ms ease-out;
+        transform: scale(1.4);
     }
 }

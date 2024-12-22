@@ -1,0 +1,60 @@
+@use '../../../mixins.scss' as *;
+
+.about_me_content {
+    @include dFlex($jc: space-between);
+    @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+    width: $base_width;
+    background-color: $dark_blue;
+    padding-bottom: 200px;
+}
+
+.about_me_container {
+    @include dFlex($fd: column, $jc: start);
+    padding-left: 100px;
+    width: 471px;
+    gap: 35px;
+    h1 {
+        @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
+    }
+}
+
+.about_me_sub_text {
+    @include dFlex($ai: start);
+    margin-left: 35px;
+    gap: 35px;
+    img {
+        width: 50px;
+        &:hover {
+            cursor: pointer;
+            transition: transform 200ms ease-out;
+            transform: scale(1.2);
+        }
+    }
+}
+
+.about_me_img {
+    @include dFlex();
+
+    img {
+        width: 453px;
+        height: 453px;
+        border: solid 4px $green;
+        border-radius: 1800px;
+    }
+
+    .green_line {
+        width: 267px;
+        height: 4px;
+        background-color: $green;
+    }
+}
+
+.purple_shadow {
+    position: absolute;
+    z-index: 600;
+    height: 120%;
+    width: $base_width;
+    background-image: url('../../../assets/img/desing_elements/purple_shadow_about_me.png');
+    background-repeat: no-repeat;
+    background-position: 160% -5%;
+}
