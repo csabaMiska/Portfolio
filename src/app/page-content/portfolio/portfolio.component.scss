@@ -1,0 +1,34 @@
+@use '../../../mixins.scss' as *;
+
+.portfolio_content {
+    @include dFlex();
+    width: $base_width;
+    background-color: $dark_blue;
+}
+
+.portfolio_title_container {
+    width: 100%;
+}
+
+.portfolio_title{
+    @include dFlex($jc: end);
+    width: 100%;
+    gap: 42px;
+    .purple_line {
+        @include lineDesign($lw: 109px, $lh: 4px, $lc: $purple);
+    }
+    h1 {
+        @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
+    }
+    .purple_line_second {
+        @include lineDesign($lw: 484px, $lh: 4px, $lc: $purple);
+    }
+}
+
+.portfolio_sub_title {
+    @include dFlex();
+    padding-bottom: 116px;
+    span {
+        @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+    }
+}

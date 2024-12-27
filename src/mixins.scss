@@ -37,9 +37,17 @@
 
 @mixin navLinkImg() {
     width: 30px;
+
     &:hover {
         cursor: pointer;
         transition: transform 300ms ease-out;
         transform: scale(1.4);
     }
+}
+
+// Design Line
+@mixin lineDesign($lw, $lh, $lc) {
+    width: $lw;
+    height: $lh;
+    background-color: $lc;
 }

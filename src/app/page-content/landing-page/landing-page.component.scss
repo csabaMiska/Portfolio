@@ -46,18 +46,18 @@
         position: absolute;
         top: 572px;
         width: 600px;
-        z-index: 300;
+        z-index: 800;
     }
 }
 
-.hero_titel_container {
+.hero_title_container {
     @include dFlex($jc: start, $ai: start, $fd: column);
     height: 100%;
     width: 70%;
     padding-top: 188px;
     margin-left: -160px;
 
-    .hero_titel {
+    .hero_title {
         @include dFlex($jc: start);
 
         span {
@@ -69,7 +69,7 @@
     }
 }
 
-.titel {
+.title {
     @include dFlex($fd: column, $ai: start);
 
     h1 {
@@ -115,9 +115,7 @@ nav {
     height: 320px;
 
     div {
-        width: 100px;
-        height: 4px;
-        background-color: $purple;
+        @include lineDesign($lw: 100px, $lh: 4px, $lc: $purple)
     }
 
     img {

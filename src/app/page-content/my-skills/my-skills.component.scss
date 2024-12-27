@@ -1,0 +1,84 @@
+@use '../../../mixins.scss' as *;
+
+.my_skills_content {
+    @include dFlex($jc: space-between);
+    @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+    width: $base_width;
+    height: 415px;
+    background-color: $dark_blue;
+    padding-bottom: 177px;
+}
+
+.my_skills_logos_container {
+    @include dFlex($jc: start);
+    position: relative;
+    z-index: 400;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 48px;
+    width: 55%;
+    height: 100%;
+}
+
+.my_skills_logos {
+    @include dFlex($fd: column);
+    width: 88px;
+    height: 100px;
+    gap: 10px;
+    margin-right: 95px;
+    margin-bottom: 54px;
+    p {
+        @include fontStyle($fs: 16px, $fw: 700, $fc: $white);
+        text-align: center;
+    }
+}
+
+.my_skills_title_container {
+    width: 42%;
+    height: 100%;
+    margin-top: 44px;
+    .my_skills_title {
+        @include dFlex($jc: end);
+        width: 100%;
+        gap: 42px;
+        h1 {
+            @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
+        }
+        .purple_line {
+            @include lineDesign($lw: 58px, $lh: 4px, $lc:$purple)
+        }
+    }
+}
+
+.my_skills_text {
+    @include dFlex($jc: start);
+    padding-right: 100px;
+    margin-top: 34px;
+    span {
+        @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+        text-align: right
+    }
+}
+
+.my_skills_btn_container {
+    @include dFlex();
+    width: 100%;
+    margin-top: 57px;
+    position: relative;
+    z-index: 400;
+    button {
+        @include primaryBtn($w: 200px, $h: 58px, $hw: 220px, $hh: 68px);
+        @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+    }
+}
+
+.green_shadow {
+    background-image: url('../../../assets/img/desing_elements/green_shadow_portfolio.png');
+    background-repeat: no-repeat;
+    background-position: 0 200%;
+    position: absolute;
+    z-index: 100;
+    width: 428px;
+    height: 1200px;
+}
+

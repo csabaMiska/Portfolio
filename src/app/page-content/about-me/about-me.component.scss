@@ -5,7 +5,7 @@
     @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
     width: $base_width;
     background-color: $dark_blue;
-    padding-bottom: 200px;
+    padding-bottom: 240px;
 }
 
 .about_me_container {
@@ -37,6 +37,8 @@
 
 .about_me_img {
     @include dFlex();
+    position: relative;
+    z-index: 700;
 
     img {
         width: 453px;
@@ -46,9 +48,7 @@
     }
 
     .green_line {
-        width: 267px;
-        height: 4px;
-        background-color: $green;
+        @include lineDesign($lw: 267px, $lh: 4px, $lc: $green)
     }
 }
 
