@@ -11,8 +11,23 @@
             </span>
         </div>
     </div>
-
     <div class="portfolio_container">
-
+        <div *ngFor="let project of portfolioProjects; let i = index" [ngClass]="{'reverse_portfolio_project': i % 2 !== 0}" class="portfolio_project">
+            <div class="project_img">
+                <img src="../../../assets/img/portfolio/{{ project.img }}">
+            </div>
+            <div class="project_info" [ngClass]="{'reverse_project_info': i % 2 !== 0}"> 
+                <h2>{{ project.name }}</h2>
+                <div class="project_skills">
+                    <div *ngFor="let skill of project.used_skills; let last = last">{{ skill }}<span *ngIf="!last"> |</span>
+                    </div>
+                </div>
+                <span class="project_description" [ngClass]="{'reverse_description': i % 2 !== 0}">{{ project.description }}</span>
+                <div class="project_test">
+                    <a href="{{ project.link }}" class="live_test_btn">Live test</a>
+                    <a href="{{ project.github_link }}" class="github_btn">Github</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

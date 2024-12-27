@@ -35,6 +35,19 @@
     }
 }
 
+@mixin secondaryBtn ($w, $h, $bc, $hbc, $b) {
+    width: $w;
+    height: $h;
+    text-decoration: none;
+    padding: 12px 30px 10px 32px;
+    border-radius: 10px;
+    border: $b;
+    background-color: $bc;
+    &:hover {
+        background-color: $hbc;
+    }
+}
+
 @mixin navLinkImg() {
     width: 30px;
 
