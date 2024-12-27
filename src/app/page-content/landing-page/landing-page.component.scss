@@ -92,6 +92,7 @@
     z-index: 500;
 
     button {
+        @include dFlex();
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
         @include primaryBtn($w: 165px, $h: 58px, $hw: 185px, $hh: 68px);
     }

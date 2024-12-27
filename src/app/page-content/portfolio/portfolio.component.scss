@@ -1,7 +1,6 @@
 @use '../../../mixins.scss' as *;
 
 .portfolio_content {
-    @include dFlex($fd: column);
     width: $base_width;
     background-color: $dark_blue;
 }
@@ -46,6 +45,8 @@
 
 .portfolio_project {
     @include dFlex();
+    position: relative;
+    z-index: 400;
     width: 1168px;
     height: 340px;
 
@@ -92,6 +93,25 @@
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
         @include secondaryBtn ($w: 92px, $h: 38px, $bc: $dark_blue, $hbc: $green, $b: 1px solid $green);
     }
+}
+
+.purpule_shadow {
+    background-image: url('../../../assets/img/desing_elements/purple_shadow_portfolio.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 636px;
+    height: 748.73px;
+}
+
+.green_shadow {
+    background-image: url('../../../assets/img/desing_elements/green_shadow_portfolio.png');
+    background-repeat: no-repeat;
+    background-size: 24%;
+    background-position: 100% 50%;
+    position: absolute;
+    width: $base_width;
+    height: 100%;
 }
 
 .reverse_portfolio_project {

@@ -67,13 +67,14 @@
     position: relative;
     z-index: 400;
     button {
+        @include dFlex();
         @include primaryBtn($w: 200px, $h: 58px, $hw: 220px, $hh: 68px);
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
     }
 }
 
 .green_shadow {
-    background-image: url('../../../assets/img/desing_elements/green_shadow_portfolio.png');
+    background-image: url('../../../assets/img/desing_elements/green_shadow_my_skills.png');
     background-repeat: no-repeat;
     background-position: 0 200%;
     position: absolute;

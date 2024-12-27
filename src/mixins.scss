@@ -10,7 +10,8 @@
 }
 
 // Fonts - Size & Weight
-@mixin fontStyle($ff: 'Poppins', $fs, $fw, $fc) {
+@mixin fontStyle($fs, $fw, $fc) {
+    font-family: 'Poppins';
     font-size: $fs;
     font-weight: $fw;
     color: $fc;
@@ -55,6 +56,28 @@
         cursor: pointer;
         transition: transform 300ms ease-out;
         transform: scale(1.4);
+    }
+}
+
+// Input's
+@mixin inputDesign($w, $h, $p) {
+    width: $w;
+    height: $h;
+    resize: none;
+    background-color: styles.$dark_blue;
+    padding: $p 25px $p 25px;
+    gap: 10px;
+    border: 1px solid styles.$purple;
+    border-radius: 10px;
+    &:hover {
+        border: 1px solid styles.$green;
+    }
+    &:focus{
+        border: 1px solid styles.$green;
+        outline: none;
+    }
+    &::placeholder {
+        color: styles.$white;
     }
 }
 

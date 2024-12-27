@@ -1,0 +1,176 @@
+@use '../../../mixins.scss' as *;
+
+.contact_content {
+    width: $base_width;
+    background-color: $dark_blue;
+    padding-bottom: 90px;
+}
+
+.contact_title {
+    @include dFlex($jc: start);
+    width: 100%;
+    padding-bottom: 85px;
+
+    .purple_line {
+        @include lineDesign($lw: 50px, $lh: 4px, $lc: $purple);
+        margin-right: 50px;
+    }
+
+    h1 {
+        @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
+    }
+}
+
+.purple_shadow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../../../assets/img/desing_elements/purple_shadow_contact.png');
+    background-repeat: no-repeat;
+    background-position: 0 140%;
+    background-size: 40%;
+}
+
+.contact_formular {
+    @include dFlex();
+    width: 100%;
+    position: relative;
+    z-index: 500;
+}
+
+.contact_text {
+    @include dFlex($fd: column, $jc: start, $ai: start);
+    height: 600px;
+    width: 50%;
+    margin-left: 100px;
+
+    h2 {
+        @include fontStyle($fs: 32px, $fw: 700, $fc: $white);
+        margin-bottom: 35px;
+        width: 473px;
+    }
+
+    p {
+        @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+        margin-bottom: 25px;
+        width: 473px;
+    }
+}
+
+.contact_form {
+    @include dFlex($fd: column, $ai: start);
+    width: 50%;
+    margin-right: 100px;
+}
+
+.input_container {
+    margin-bottom: 32px;
+
+    input[type="text"],
+    [type="mail"] {
+        @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+        @include inputDesign($w: 617px, $h: 50px, $p: 0);
+    }
+}
+
+.textarea_container {
+    margin-bottom: 32px;
+
+    textarea {
+        @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+        @include inputDesign($w: 617px, $h: 202px, $p: 12px);
+    }
+}
+
+.error_message {
+    @include fontStyle($fs: 14px, $fw: 400, $fc: $red);
+    height: 17px;
+    margin-top: 10px;
+    display: none;
+}
+
+.checkbox_container {
+    @include dFlex($fd: column, $ai: start);
+    height: 27px;
+    width: 100%;
+    margin-bottom: 42px;
+
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        @include dFlex($jc: start);
+        @include fontStyle($fs: 14px, $fw: 400, $fc: $white);
+        gap: 4px;
+        width: 100%;
+        height: 24px;
+        padding-left: 30px;
+        background-image: url('../../../assets/img/icons/check_box_blank.png');
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            @include fontStyle($fs: 14px, $fw: 400, $fc: $purple);
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    input[type="checkbox"]:hover+label {
+        background-image: url('../../../assets/img/icons/check_box_hover.png');
+        background-repeat: no-repeat;
+        height: 24px;
+    }
+
+
+    input[type="checkbox"]:checked+label {
+        background-image: url('../../../assets/img/icons/check_box_checked.png');
+        background-repeat: no-repeat;
+        height: 24px;
+    }
+
+    input[type="checkbox"]:checked:hover+label {
+        background-image: url('../../../assets/img/icons/check_box_checked_hover.png');
+        background-repeat: no-repeat;
+        height: 24px;
+    }
+}
+
+.btn_container {
+    @include dFlex($ai: start);
+    width: 100%;
+    height: 74px;
+
+    button {
+        @include dFlex();
+        @include primaryBtn($w: 253px, $h: 58px, $hw: 273px, $hh: 68px);
+        @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+    }
+}
+
+.scroll_up_btn_container {
+    @include dFlex($jc: end);
+    position: relative;
+    z-index: 500;
+    width: 100%;
+    margin-top: 51px;
+
+    .arrow {
+        margin-right: 100px;
+        width: 39px;
+        height: 39px;
+        background-image: url('../../../assets/img/icons/up_arrow_white.png');
+
+        &:hover {
+            cursor: pointer;
+            background-image: url('../../../assets/img/icons/up_arrow_green.png');
+            transition: transform 300ms ease-out;
+            transform: scale(1.2);
+        }
+    }
+}
