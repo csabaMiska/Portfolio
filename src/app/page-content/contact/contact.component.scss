@@ -67,7 +67,7 @@
     margin-bottom: 32px;
 
     input[type="text"],
-    [type="mail"] {
+    [type="email"] {
         @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
         @include inputDesign($w: 617px, $h: 50px, $p: 0);
     }
@@ -173,4 +173,8 @@
             transform: scale(1.2);
         }
     }
+}
+
+.input_invalied {
+    border: 1px solid $red !important;
 }

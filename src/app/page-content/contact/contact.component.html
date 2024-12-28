@@ -12,31 +12,49 @@
             <p>Need a Frontend developer? Contact me!</p>
         </div>
         <div class="contact_form">
-            <form>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input_container">
-                    <input type="text" placeholder="Your name">
-                    <div class="error_message">Your name is required</div>
+                    <input #name="ngModel" [(ngModel)]="contactData.name"
+                        [ngClass]="{'input_invalied': !name.valid && name.touched}" name="name" type="text"
+                        minlength="2" placeholder="Your name" required>
+                    <div class="error_message" *ngIf="!name.valid && name.touched" [ngStyle]="{'display': 'flex'}">
+                        Your name is required
+                    </div>
                 </div>
                 <div class="input_container">
-                    <input type="mail" placeholder="Your email">
-                    <div class="error_message">Your mail is required</div>
+                    <input #email="ngModel" [(ngModel)]="contactData.email"
+                        [ngClass]="{'input_invalied': !email.valid && email.touched}" name="email" type="email" 
+                        placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                    <div class="error_message" *ngIf="!email.valid && email.touched" [ngStyle]="{'display': 'flex'}">
+                        Your mail is required
+                    </div>
                 </div>
                 <div class="textarea_container">
-                    <textarea name="message" id="message" placeholder="Your message"></textarea>
-                    <div class="error_message">Your message is empty</div>
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" 
+                        [ngClass]="{'input_invalied': !message.valid && message.touched}" name="message" id="message" 
+                        placeholder="Your message" minlength="2" required></textarea>
+                    <div class="error_message" *ngIf="!message.valid && message.touched" [ngStyle]="{'display': 'flex'}">
+                        Your message is empty
+                    </div>
                 </div>
                 <div class="checkbox_container">
-                    <input type="checkbox" name="privacy_policy" id="privacy_policy">
-                    <label for="privacy_policy">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
-                    <div class="error_message">Please accept the privacy policy.</div>
+                    <input #checkbox="ngModel" [(ngModel)]="privacyPolicy" checked="privacyPoliicy" type="checkbox" name="privacy_policy" 
+                    id="privacy_policy" required>
+                    <label for="privacy_policy">I've read the <a href="#">privacy policy</a> and agree to the processing
+                        of my data as outlined.</label>
+                    <div class="error_message" *ngIf="!privacyPolicy && contactForm.submitted" [ngStyle]="{'display': 'flex'}">
+                        Please accept the privacy policy.
+                    </div>
                 </div>
                 <div class="btn_container">
-                    <button>Send message :)</button>
+                    <button type="submit" [disabled]="!privacyPolicy || !contactForm.valid">Send message :)</button>
                 </div>
             </form>
         </div>
     </div>
     <div class="scroll_up_btn_container">
-        <a href="#landingPage"><div class="arrow"></div></a>
+        <a href="#landingPage">
+            <div class="arrow"></div>
+        </a>
     </div>
 </div>

@@ -34,6 +34,16 @@
         height: $hh;
         background-color: styles.$purple;
     }
+
+    &:disabled {
+        background-color: silver;
+        cursor: default;
+
+        &:hover {
+            width: $w;
+            height: $h;
+        }
+    }
 }
 
 @mixin secondaryBtn ($w, $h, $bc, $hbc, $b) {
@@ -44,6 +54,7 @@
     border-radius: 10px;
     border: $b;
     background-color: $bc;
+
     &:hover {
         background-color: $hbc;
     }
@@ -69,13 +80,16 @@
     gap: 10px;
     border: 1px solid styles.$purple;
     border-radius: 10px;
+
     &:hover {
         border: 1px solid styles.$green;
     }
-    &:focus{
+
+    &:focus {
         border: 1px solid styles.$green;
         outline: none;
     }
+
     &::placeholder {
         color: styles.$white;
     }
