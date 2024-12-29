@@ -3,9 +3,11 @@
 .about_me_content {
     @include dFlex($jc: space-between);
     @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
-    width: $base_width;
+    max-width: $max_width;
+    width: $full_width;
     background-color: $dark_blue;
     padding-bottom: 240px;
+    padding-top: 138px;
 }
 
 .about_me_container {
@@ -54,7 +56,8 @@
 
 .shadow_container {
     @include dFlex($jc:end);
-    width: $base_width;
+    max-width: $max_width;
+    width: $full_width;
     position: absolute;
     z-index: 600;
 }

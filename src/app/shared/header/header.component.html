@@ -1,8 +1,10 @@
 <header>
     <a href="#landingPage"><h1>Csaba</h1></a>
-    <nav>
+    <div (click)="toggleMenu()" [ngClass]="{'menu_btn': !showMobileMenu, 'menu_close_btn': showMobileMenu}"></div>
+    <nav (click)="toggleMenu()" [ngClass]="{'menu_animation_in': showMobileMenu, 'menu_animation_out': !showMobileMenu}">
         <a href="#aboutMe">About me</a>
         <a href="#mySkills">Skills</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#contact" class="contact_btn">Contact</a>
     </nav>
 </header>

@@ -1,7 +1,8 @@
 @use '../../../mixins.scss' as *;
 
 .contact_content {
-    width: $base_width;
+    max-width: $max_width;
+    width: $full_width;
     background-color: $dark_blue;
     padding-bottom: 90px;
 }

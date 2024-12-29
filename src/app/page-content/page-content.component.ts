@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-page-content',
+  standalone: true,
   imports: [
     LandingPageComponent,
     AboutMeComponent,

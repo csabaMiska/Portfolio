@@ -1,7 +1,8 @@
 @use './fonts.scss' as font;
 
-// Base width
-$base_width: 1440px;
+// Page width
+$max_width: 1440px;
+$full_width: 100vw;
 
 // Portfolio Design Colors
 $green: rgba(112, 230, 28, 1);
@@ -13,15 +14,17 @@ $dark_blue_transparency: rgba(20, 29, 47, 0.8);
 $red: rgba(230, 28, 64, 1);
 
 
-html, body {
+html,
+body {
+    position: relative;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     margin: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
     font-family: 'Poppins';
-    background-color: black;
+    background-color: $dark_blue_transparency;
     color: $white;
 }
 
@@ -32,7 +35,86 @@ app-footer {
     width: 100%;
 }
 
-h1, h2, p {
+h1 {
     margin-block-start: 0;
     margin-block-end: 0;
+    font-size: 90px;
+    font-weight: 700;
+    color: $white;
+
+    @media (max-width: 1375px) {
+        font-size: 80px;
+    }
+
+    @media (max-width: 1295px) {
+        font-size: 74px;
+    }
+
+    @media (max-width: 1185px) {
+        font-size: 66px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 56px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 46px;
+    }
+
+    @media (max-width: 390px) {
+        font-size: 38px;
+    }
+}
+
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 58px;
+    font-weight: 400;
+    color: $purple;
+
+    @media (max-width: 1420px) {
+        font-size: 56px;
+    }
+
+    @media (max-width: 1375px) {
+        font-size: 50px;
+    }
+
+    @media (max-width: 1295px) {
+        font-size: 46px;
+    }
+
+    @media (max-width: 1185px) {
+        font-size: 42px;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 35px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 29px;
+    }
+
+    @media (max-width: 390px) {
+        font-size: 24px;
+    }
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $green $dark_blue_transparency;
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
 }

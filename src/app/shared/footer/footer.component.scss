@@ -4,7 +4,8 @@ footer {
     @include dFlex($jc: space-between);
     position: relative;
     bottom: 0;
-    width: 1440px;
+    max-width: $max_width;
+    width: $full_width;
     height: 291px;
     background-color: $dark_blue;
     border-top: solid 4px $green;

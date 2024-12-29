@@ -1,61 +1,200 @@
 @use '../../../mixins.scss' as *;
 
-.content {
-    width: 1440px;
-    height: 900px;
-    margin-top: 109px;
+.landing_page_content {
+    width: $full_width;
+    max-width: $max_width;
+    height: 100vh;
+    max-height: 911px;
+    padding-top: 109px;
     background-color: $dark_blue;
 }
 
 .hero_container {
     @include dFlex($jc: space-between);
     width: 100%;
-    height: 100%;
+
+    @media (max-width: 1010px) {
+        @include dFlex($jc: start, $ai: center, $fd: column);
+    }
 }
 
 .hero_img {
     @include dFlex();
     width: 70%;
-    height: 100%;
-    margin-top: 160px;
+    height: 911px;
+
+    @media (max-width: 1375px) {
+        width: 80%;
+    }
+
+    @media (max-width: 1010px) {
+        width: 100vw;
+        height: 545px;
+    }
+
+    @media (max-width: 600px) {
+        height: 405px;
+    }
+
+    @media (max-width: 390px) {
+        height: 350px;
+    }
 
     .purple_shadow {
         width: 100%;
         height: 100%;
         background-image: url('../../../assets/img/desing_elements/purple_shadow_landing_page.png');
         background-repeat: no-repeat;
-        background-position: -30% -10%;
+        background-size: contain;
+        background-position: -50% -10%;
+
+        @media (max-width: 1295px) {
+            background-position: -40% -10%;
+            background-size: 80%;
+        }
+
+        @media (max-width: 1010px) {
+            height: 570px;
+            background-size: 60%;
+            background-position: 16% -10%;
+        }
+
+        @media (max-width: 760px) {
+            background-position: 0 -10%;
+        }
+
+        @media (max-width: 660px) {
+            background-position: 10% 80%;
+            background-size: 60%;
+        }
+
+        @media (max-width: 450px) {
+            background-position: 0 50%;
+        }
     }
 
     .green_shadow {
+        @include dFlex();
         width: 100%;
         height: 100%;
         background-image: url('../../../assets/img/desing_elements/green_shadow_landing_page.png');
         background-repeat: no-repeat;
-        background-position: 110% -10%;
-    }
+        background-position: 110% -15%;
 
-    .profile_img {
-        position: absolute;
-        top: 80px;
-        width: 580px;
-        height: 705px;
-    }
+        @media (max-width: 1295px) {
+            background-position: 108% -10%;
+            background-size: 80%;
+        }
 
-    .profile_cut {
-        position: absolute;
-        top: 572px;
-        width: 580px;
-        z-index: 800;
+        @media (max-width: 1010px) {
+            background-position: 108% -16%;
+            background-size: 70%;
+        }
+
+        @media (max-width: 660px) {
+            background-position: 110% 10%;
+            background-size: 80%;
+        }
+
+        @media (max-width: 600px) {
+            background-position: 90% 50%;
+            background-size: 60%;
+        }
+
+        @media (max-width: 450px) {
+            background-position: 100% 50%;
+            background-size: 70%;
+        }
+
+        .profile_img {
+            position: absolute;
+            top: 124px;
+            width: 580px;
+            height: 705px;
+
+            @media (max-width: 1295px) {
+                width: 540px;
+                height: 665px;
+            }
+
+            @media (max-width: 1185px) {
+                width: 500px;
+                height: 625px;
+            }            
+
+            @media (max-width: 1010px) {
+                width: 400px;
+                height: 525px;
+            }
+
+            @media (max-width: 600px) {
+                width: 300px;
+                height: 396px;
+            }
+
+            @media (max-width: 390px) {
+                width: 260px;
+                height: 340px;
+            }
+        }
+    
+        .profile_cut {
+            position: absolute;
+            top: 618px;
+            width: 580px;
+            z-index: 800;
+
+            @media (max-width: 1295px) {
+                width: 540px;
+                top: 589px;
+            }
+
+            @media (max-width: 1185px) {
+                width: 500px;
+                top: 561px;
+            } 
+
+            @media (max-width: 1010px) {
+                width: 400px;
+                top: 492px;
+            }
+
+            @media (max-width: 600px) {
+                width: 300px;
+                top: 401px;
+            }
+
+            @media (max-width: 390px) {
+                width: 260px;
+                top: 362px;
+            }
+        }
     }
 }
 
 .hero_title_container {
-    @include dFlex($jc: start, $ai: start, $fd: column);
-    height: 100%;
+    @include dFlex($jc: start, $ai: end, $fd: column);
+    height: 911px;
     width: 70%;
     padding-top: 188px;
     margin-left: -160px;
+    margin-right: 100px;
+
+    @media (max-width: 1100px) {
+        margin-right: 50px;
+    }
+
+    @media (max-width: 1010px) {
+        justify-content: end;
+        height: fit-content;
+        width: 100%;
+        align-items: center;
+        padding-top: 32px;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        z-index: 500;
+    }
 
     .hero_title {
         @include dFlex($jc: start);
@@ -65,6 +204,36 @@
             writing-mode: vertical-rl;
             transform: rotate(180deg);
             margin-right: 24px;
+
+            @media (max-width: 1375px) {
+                font-size: 52px;
+                margin-right: 20px;
+            }
+
+            @media (max-width: 1295px) {
+                font-size: 48px;
+                margin-right: 16px;
+            }
+
+            @media (max-width: 1185px) {
+                font-size: 40px;
+                margin-right: 12px;
+            }
+
+            @media (max-width: 600px) {
+                font-size: 36px;
+                margin-right: 8px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 29px;
+                margin-right: 4px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 23px;
+                margin-right: 0px;
+            }
         }
     }
 }
@@ -73,13 +242,23 @@
     @include dFlex($fd: column, $ai: start);
 
     h1 {
-        @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
         margin-top: -12px;
     }
 
-    p {
-        @include fontStyle($fs: 58px, $fw: 400, $fc: $purple);
+    h2 {
         margin-top: -32px;
+
+        @media (max-width: 600px) {
+            margin-top: -24px;
+        }
+
+        @media (max-width: 480px) {
+            margin-top: -20px;
+        }
+        
+        @media (max-width: 390px) {
+            margin-top: -16px;
+        }
     }
 
 }
@@ -91,32 +270,75 @@
     position: relative;
     z-index: 500;
 
+    @media (max-width: 1010px) {
+        margin-top: 20px;
+        margin-bottom: 120px;
+    }
+
     button {
         @include dFlex();
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
         @include primaryBtn($w: 165px, $h: 58px, $hw: 185px, $hh: 68px);
+
+        @media (max-width: 1010px) {
+            @include fontStyle($fs: 19px, $fw: 400, $fc: $white);
+            @include primaryBtn($w: 145px, $h: 53px, $hw: 165px, $hh: 63px);
+        }
+
+        @media (max-width: 480px) {
+            @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+            @include primaryBtn($w: 133px, $h: 49px, $hw: 153px, $hh: 59px);
+        }
     }
 }
 
 .dark_blue_element {
     @include dFlex($jc: space-between, $ai: end);
     position: absolute;
-    height: 700px;
-    width: $base_width;
-    top: 350px;
+    height: 100vh;
+    max-height: 632px;
+    padding-bottom: 40px;
+    width: $full_width;
+    max-width: $max_width;
+    top: 388px;
     z-index: 300;
     background-image: url('../../../assets/img/desing_elements/vector_landing_page.png');
     background-repeat: no-repeat;
-    
+
+    @media (max-width: 1295px) {
+        top: 340px;
+    }
+
+    @media (max-width: 1185px) {
+       top: 300px;
+    }
+
+    @media (max-width: 1010px) {
+        margin-top: -84px;
+    }
+
+    @media (max-width: 600px) {
+        margin-top: -214px;
+        padding-bottom: 80px;
+        background-position: 35% -7%;
+    }
+
+    @media (max-width: 390px) {
+        margin-top: -274px;
+    }
 }
 
 nav {
     @include dFlex();
     gap: 42px;
-    height: 320px;
-
+    padding-bottom: 120px;
+    
     div {
-        @include lineDesign($lw: 100px, $lh: 4px, $lc: $purple)
+        @include lineDesign($lw: 100px, $lh: 4px, $lc: $purple);
+
+        @media (max-width: 480px) {
+            @include lineDesign($lw: 18%, $lh: 4px, $lc: $purple);
+        }
     }
 
     img {
@@ -131,11 +353,52 @@ nav {
             color: $green;
         }
     }
+
+    @media (max-width: 1295px) {
+        padding-bottom: 70px;
+    }
+
+    @media (max-width: 1185px) {
+        padding-bottom: 40px;
+     }
+
+    @media (max-width: 1010px) {
+        padding-bottom: 0;
+        margin-bottom: -130px;
+
+        .email {
+            display: none;
+        } 
+    }
+
+    @media (max-width: 600px) {
+        margin-bottom: -80px;
+    }
+
+    @media (max-width: 480px) {
+        @include dFlex($jc: start);
+        width: 100%;
+        margin-bottom: -60px;
+    }
+
+    @media (max-width: 390px) {
+        margin-bottom: -40px;
+    }
+
+    @media (max-height: 700px) {
+        margin-bottom: -80px;
+    }
+
+    @media (max-height: 750px) {
+        margin-bottom: -120px;
+    }
 }
 
 .scroll_down_container {
     @include dFlex();
-    height: 480px;
+    padding-bottom: 120px;
+    position: relative;
+    z-index: 1200;
     span {
         @include dFlex();
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
@@ -143,6 +406,18 @@ nav {
         transform: rotate(0deg);
         gap: 7px;
         margin-right: 96px;
+    }
+
+    @media (max-width: 1295px) {
+        padding-bottom: 70px;
+    }
+
+    @media (max-width: 1185px) {
+        padding-bottom: 40px;
+     }
+
+    @media (max-width: 1010px) {
+        display: none;
     }
 
 }

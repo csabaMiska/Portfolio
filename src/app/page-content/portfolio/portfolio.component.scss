@@ -1,7 +1,8 @@
 @use '../../../mixins.scss' as *;
 
 .portfolio_content {
-    width: $base_width;
+    max-width: $max_width;
+    width: $full_width;
     background-color: $dark_blue;
 }
 
@@ -110,7 +111,8 @@
     background-size: 24%;
     background-position: 100% 50%;
     position: absolute;
-    width: $base_width;
+    max-width: $max_width;
+    width: $full_width;
     height: 100%;
 }
 

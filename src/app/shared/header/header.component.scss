@@ -6,36 +6,124 @@ header {
     z-index: 1000;
     top: 0;
     height: 109px;
-    width: 1440px;
+    max-width: $max_width;
+    width: $full_width;
     background-color: $dark_blue;
-        a {
-            text-decoration: none;
-                h1 {
-                    margin-left: 100px;
-                    color: $white;
-                    font-size: 32px;
-                    font-weight: bold;
-                    letter-spacing: 2px; 
-                        &:hover {
-                            cursor: pointer;
-                            color: $green;
-                        }
-                    }
+
+    @media (max-width: 700px) {
+        height: 80px;
+    }
+
+    a {
+        text-decoration: none;
+
+        h1 {
+            margin-left: 100px;
+            color: $white;
+            font-size: 32px !important;
+            letter-spacing: 2px;
+
+            &:hover {
+                cursor: pointer;
+                color: $green;
+            }
+
+            @media (max-width: 1100px) {
+                margin-left: 50px;
+            }
+
+            @media (max-width: 720px) {
+                margin-left: 25px;
+            }
         }
+    }
 }
 
 nav {
     @include dFlex();
     margin-right: 100px;
     gap: 29px;
-        a {
-            text-decoration: none;
-            color: $white;
-            font-size: 23px;
-            font-weight: 400;
-                &:hover {
-                    cursor: pointer;
-                    color: $green;
-                }
+
+    a {
+        text-decoration: none;
+        @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+
+        &:hover {
+            cursor: pointer;
+            color: $green;
         }
+    }
+
+    .contact_btn {
+        display: none;
+    }
+
+    @media (max-width: 1100px) {
+        margin-right: 50px;
+    }
+
+    @media (max-width: 720px) {
+        @include dFlex($fd: column, $jc: start);
+        padding-top: 180px;
+        margin-right: 0;
+        position: absolute;
+        top: 109px;
+        right: -$full_width;
+        width: $full_width;
+        height: 100vh;
+        background-color: $dark_blue_transparency;
+
+        .contact_btn {
+            display: block;
+        }
+    }
+}
+
+.menu_btn {
+    display: none;
+    width: 30px;
+    height: 27.72px;
+    margin-right: 25px;
+    background-image: url('../../../assets/img/icons/menu_open.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &:hover {
+        cursor: pointer;
+        background-image: url('../../../assets/img/icons/menu_open_hover.png');
+    }
+
+    @media (max-width: 720px) {
+        display: block;
+    }
+}
+
+.menu_close_btn {
+    display: none;
+    width: 27px;
+    height: 27px;
+    margin-right: 25px;
+    background-image: url('../../../assets/img/icons/menu_close.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(0.8);
+    }
+
+    @media (max-width: 720px) {
+        display: block;
+    }
+}
+
+// Menu in- and out- animation
+.menu_animation_in {
+    transition: 300ms ease-in;
+    right: 0;
+}
+
+.menu_animation_out {
+    transition: 300ms ease-out;
+    right: -$full_width;
 }
