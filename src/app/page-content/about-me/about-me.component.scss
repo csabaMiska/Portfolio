@@ -2,12 +2,17 @@
 
 .about_me_content {
     @include dFlex($jc: space-between);
-    @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
     max-width: $max_width;
     width: $full_width;
     background-color: $dark_blue;
     padding-bottom: 240px;
-    padding-top: 138px;
+    padding-top: 108px;
+
+
+    @media (max-width: 600px) {
+        padding-top: 60px;
+
+    }
 }
 
 .about_me_container {
@@ -16,8 +21,21 @@
     width: 471px;
     gap: 35px;
 
-    h1 {
-        @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
+    @media (max-width: 1010px) {
+        width: 100%;
+        padding-right: 100px;
+        position: relative;
+        z-index: 700;
+    }
+
+    @media (max-width: 1100px) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: 720px) {
+        padding-left: 25px;
+        padding-right: 25px;
     }
 }
 
@@ -25,6 +43,10 @@
     @include dFlex($ai: start);
     margin-left: 35px;
     gap: 35px;
+
+    @media (max-width: 480px) {
+        margin-left: 0;
+    }
 
     img {
         width: 50px;
@@ -47,15 +69,37 @@
         height: 453px;
         border: solid 4px $green;
         border-radius: 1800px;
+
+        @media (max-width: 1295px) {
+            width: 400px;
+            height: 400px;
+        }
+
+        @media (max-width: 1295px) {
+            width: 320px;
+            height: 320px;
+        }
     }
 
     .green_line {
-        @include lineDesign($lw: 267px, $lh: 4px, $lc: $green)
+        @include lineDesign($lw: 267px, $lh: 4px, $lc: $green);
+
+        @media (max-width: 1375px) {
+            width: 167px;
+        }
+
+        @media (max-width: 1295px) {
+            width: 107px;
+        }
+    }
+
+    @media (max-width: 1010px) {
+        display: none;
     }
 }
 
 .shadow_container {
-    @include dFlex($jc:end);
+    @include dFlex($jc: end);
     max-width: $max_width;
     width: $full_width;
     position: absolute;
@@ -69,4 +113,10 @@
     background-image: url('../../../assets/img/desing_elements/purple_shadow_about_me.png');
     background-repeat: no-repeat;
     background-position: -20% 30%;
+
+    @media (max-width: 600px) {
+        margin-top: -200px;
+        background-size: 180%;
+        background-position: -60% 30%;
+    }
 }
