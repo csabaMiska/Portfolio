@@ -1,13 +1,25 @@
 @use '../../../mixins.scss' as *;
 
 .my_skills_content {
-    @include dFlex($jc: space-between);
     @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
     max-width: $max_width;
     width: $full_width;
-    height: 415px;
     background-color: $dark_blue;
-    padding-bottom: 177px;
+    padding-bottom: 200px;
+}
+
+.my_skills_container {
+    @include dFlex($jc: space-between);
+    padding-left: 100px;
+
+    @media (max-width: 1100px) {
+        padding-left: 50px;
+    }
+
+    @media (max-width: 1010px) {
+        @include dFlex($fd: column-reverse);
+        padding-left: 0;
+    }
 }
 
 .my_skills_logos_container {
@@ -15,58 +27,172 @@
     position: relative;
     z-index: 400;
     flex-wrap: wrap;
-    margin-left: 100px;
-    margin-right: 48px;
-    width: 55%;
-    height: 100%;
+    width: 50%;
+    height: 70%;
+    gap: 88px;
+
+    @media (max-width: 1330px) {
+        gap: 70px;
+    }
+
+    @media (max-width: 1170px) {
+        gap: 50px;
+    }
+
+    @media (max-width: 1010px) {
+        @include dFlex();
+        width: 90%;
+    }
+
+    @media (max-width: 411px) {
+        gap: 24px;
+    }
 }
 
 .my_skills_logos {
     @include dFlex($fd: column);
-    width: 88px;
-    height: 100px;
     gap: 10px;
-    margin-right: 95px;
-    margin-bottom: 54px;
+    height: 100px;
+    width: 80px;
+
     p {
         @include fontStyle($fs: 16px, $fw: 700, $fc: $white);
         text-align: center;
     }
+
+    img {
+        height: 60px;
+    }
+
+    @media (max-width: 1010px) {
+        width: 160px;
+    }
+
+    @media (max-width: 890px) {
+        width: 120px;
+    }
+
+    @media (max-width: 570px) {
+        width: 100px;
+        height: 70px;
+
+        img {
+            height: 50px;
+        }
+
+        p {
+            @include fontStyle($fs: 14px, $fw: 700, $fc: $white);
+        }
+    }
+
+    @media (max-width: 450px) {
+        width: 90px;
+        height: 70px;
+
+        img {
+            height: 45px;
+        }
+    }
+
+    
+    @media (max-width: 410px) {
+        width: 100px;
+        height: 80px;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 390px) {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .my_skills_title_container {
-    width: 42%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     margin-top: 44px;
+
+    @media (max-width: 1010px) {
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 35px;
+    }
+
     .my_skills_title {
         @include dFlex($jc: end);
         width: 100%;
         gap: 42px;
-        h1 {
-            @include fontStyle($fs: 90px, $fw: 700, $fc: $white);
-        }
+
         .purple_line {
-            @include lineDesign($lw: 58px, $lh: 4px, $lc:$purple)
+            @include lineDesign($lw: 58px, $lh: 4px, $lc: $purple);
+        }
+
+        @media (max-width: 1100px) {
+            gap: 15px;
+            .purple_line {
+                @include lineDesign($lw: 35px, $lh: 4px, $lc: $purple);
+            }
+        }
+    
+        @media (max-width: 720px) {
+            gap: 5px;
+            .purple_line {
+                @include lineDesign($lw: 20px, $lh: 4px, $lc: $purple);
+            }
         }
     }
 }
 
 .my_skills_text {
     @include dFlex($jc: start);
-    padding-right: 100px;
+    margin-right: 100px;
     margin-top: 34px;
+
+    @media (max-width: 1100px) {
+        margin-right: 50px;
+    }
+
+    @media (max-width: 1010px) {
+        @include dFlex($jc: end);
+    }
+
+    @media (max-width: 720px) {
+        margin-right: 25px;
+    }
+
     span {
         @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
-        text-align: right
+        text-align: right;
+
+        @media (max-width: 1010px) {
+            max-width: 70%;
+        }
+
+        @media (max-width: 530px) {
+            max-width: 90%;
+        }
+
+        @media (max-width: 400px) {
+            max-width: 95%;
+        }
     }
 }
 
 .my_skills_btn_container {
-    @include dFlex();
+    @include dFlex($ai: start);
     width: 100%;
     margin-top: 57px;
+    height: 80px;
     position: relative;
     z-index: 400;
+
+    @media (max-width: 1010px) {
+        display: none;
+    }
+
     button {
         @include dFlex();
         @include primaryBtn($w: 200px, $h: 58px, $hw: 220px, $hh: 68px);
@@ -75,12 +201,68 @@
 }
 
 .green_shadow {
+    @include dFlex($ai: end);
+    width: 50%;
+    height: 911px;
+    margin-top: -511px;
+    position: absolute;
     background-image: url('../../../assets/img/desing_elements/green_shadow_my_skills.png');
     background-repeat: no-repeat;
-    background-position: 0 200%;
-    position: absolute;
-    z-index: 100;
-    width: 428px;
-    height: 1200px;
+    background-position: 0 -100%;
+
+    @media (max-width: 1010px) {
+       width: 100%;
+    }
+
+    @media (max-width: 700px) {
+        background-position: -20% -100%;
+     }
+
+     @media (max-width: 530px) {
+        background-position: -50% -100%;
+     }
+
+     @media (max-width: 430px) {
+        background-position: -100% -100%;
+     }
+
+     @media (max-width: 390px) {
+        background-position: -300% -80%;
+     }
+
+     @media (max-width: 370px) {
+        background-position: -100% 140%;
+        background-size: 80%;
+     }
+
+     @media (max-width: 340px) {
+        background-position: -140% 140%;
+     }
 }
 
+.my_skills_mobile_btn_container {
+    @include dFlex($ai: start);
+    display: none;
+    width: 100%;
+    position: relative;
+    z-index: 400;
+    height: 80px;
+    
+    @media (max-width: 1010px) {
+        display: flex;
+        margin-bottom: 270px;
+    }
+
+    button {
+        position: relative;
+        z-index: 600;
+        @include dFlex();
+        @include fontStyle($fs: 18px, $fw: 400, $fc: $white);
+        @include primaryBtn($w: 170px, $h: 53px, $hw: 180px, $hh: 63px);
+
+        @media (max-width: 480px) {
+            @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+            @include primaryBtn($w: 158px, $h: 49px, $hw: 168px, $hh: 59px);
+        }
+    }
+}
