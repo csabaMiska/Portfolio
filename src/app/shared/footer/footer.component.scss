@@ -9,37 +9,110 @@ footer {
     height: 291px;
     background-color: $dark_blue;
     border-top: solid 4px $green;
-        div {
-            margin-left: 100px;
-                h1 {
-                    @include fontStyle($fs: 32px, $fw: bold, $fc: $white);
-                    letter-spacing: 2px; 
-                        &:hover {
-                            cursor: pointer;
-                            color: $green;
-                        }
-                }
 
-                p {
-                    @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
-                        &:hover {
-                            cursor: pointer;
-                            text-decoration: underline 2px solid $light_blue;
-                            text-underline-offset: 6px;
-                        }
-                }
+    @media (max-width: 800px) {
+        @include dFlex($jc: center, $fd: column);
+        gap: 23px;
+        height: 380px;
+    }
+
+    div {
+        margin-left: 100px;
+
+        @media (max-width: 1100px) {
+            margin-left: 50px;
         }
+
+        h1 {
+            @include fontStyle($fs: 32px, $fw: bold, $fc: $white);
+            letter-spacing: 2px;
+
+            &:hover {
+                cursor: pointer;
+                color: $green;
+            }
+        }
+
+        a {
+            @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+            text-decoration: none;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline 2px solid $light_blue;
+                text-underline-offset: 6px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            margin-left: 0;
+
+            h1 {
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                display: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 44px;
+                margin-bottom: 20px;
+            }
+
+        }
+    }
 }
 
 span {
     @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+
+    @media (max-width: 900px) {
+        @include fontStyle($fs: 19px, $fw: 400, $fc: $white);
+    }
+
+    @media (max-width: 800px) {
+        @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
+    }
+
+    @media (max-width: 500px) {
+        @include fontStyle($fs: 21px, $fw: 400, $fc: $white);
+    }
 }
 
 nav {
     @include dFlex();
     margin-right: 100px;
     gap: 42px;
-        img {
-            @include navLinkImg();
-        }
+
+    img {
+        @include navLinkImg();
+    }
+
+    @media (max-width: 1100px) {
+        margin-right: 50px;
+    }
+
+    @media (max-width: 800px) {
+        margin-right: 0;
+    }
+}
+
+.impressum_mobile {
+    @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+    text-decoration: none;
+    display: none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline 2px solid $light_blue;
+        text-underline-offset: 6px;
+    }
+
+    @media (max-width: 800px) {
+        display: block;
+    }
 }
