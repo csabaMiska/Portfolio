@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { PortfolioDataService } from '../../portfoliodata.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,6 +13,14 @@ import { PortfolioDataService } from '../../portfoliodata.service';
 })
 export class PortfolioComponent {
   portfolioDate = inject(PortfolioDataService);
-
   portfolioProjects = this.portfolioDate.portfolioProjects;
+  mobilViewOn:boolean = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.breakpointObserver
+      .observe(['(max-width: 1010px)'])
+      .subscribe(result => {
+        this.mobilViewOn = result.matches;
+      });
+  }
 }

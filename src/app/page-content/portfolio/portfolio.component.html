@@ -13,8 +13,7 @@
     </div>
     <div class="purpule_shadow"></div>
     <div class="portfolio_container">
-        <div class="green_shadow"></div>
-        <div *ngFor="let project of portfolioProjects; let i = index" [ngClass]="{'reverse_portfolio_project': i % 2 !== 0}" class="portfolio_project">
+        <div *ngFor="let project of portfolioProjects; let i = index" [ngClass]="{'reverse_portfolio_project': i % 2 !== 0, 'direction_column': mobilViewOn}" class="portfolio_project">
             <div class="project_img">
                 <img src="../../../assets/img/portfolio/{{ project.img }}">
             </div>
@@ -32,4 +31,5 @@
             </div>
         </div>
     </div>
+    <div class="green_shadow"></div>
 </div>
