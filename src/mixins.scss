@@ -72,9 +72,11 @@
 
 // Input's
 @mixin inputDesign($w, $h, $p) {
-    width: $w;
+    width: 100%;
+    max-width: $w;
     height: $h;
     resize: none;
+    box-sizing: border-box;
     background-color: styles.$dark_blue;
     padding: $p 25px $p 25px;
     gap: 10px;
