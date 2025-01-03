@@ -25,8 +25,8 @@
                 </div>
                 <span class="project_description" [ngClass]="{'reverse_description': i % 2 !== 0}">{{ project.description }}</span>
                 <div class="project_test">
-                    <a href="{{ project.link }}" class="live_test_btn">Live test</a>
-                    <a href="{{ project.github_link }}" class="github_btn">Github</a>
+                    <a href="{{ project.link }}" target="_blank" class="live_test_btn">Live test</a>
+                    <a href="{{ project.github_link }}" target="_blank" class="github_btn">Github</a>
                 </div>
             </div>
         </div>

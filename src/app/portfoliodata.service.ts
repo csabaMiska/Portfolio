@@ -56,8 +56,8 @@ export class PortfolioDataService {
       img: 'pokedex.png',
       used_skills: ['Javascript', 'HTML', 'CSS', 'Api'],
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      link: 'hier kommt das link',
-      github_link: 'hier kommt das githublink'
+      link: 'http://pokedex.csaba-miska.net/index.html',
+      github_link: 'https://github.com/csabaMiska/Pokedex'
     },
     {
       name: 'Join',
@@ -72,8 +72,8 @@ export class PortfolioDataService {
       img: 'sharkie.png',
       used_skills: ['Javascript', 'HTML', 'CSS',],
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
-      link: 'hier kommt das link',
-      github_link: 'hier kommt das githublink'
+      link: 'http://sharkie.csaba-miska.net/sharkie.html',
+      github_link: 'https://github.com/csabaMiska/Sharkie'
     }
   ];
 }

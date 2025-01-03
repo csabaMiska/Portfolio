@@ -193,7 +193,7 @@
         display: none;
     }
 
-    button {
+    a {
         @include dFlex();
         @include primaryBtn($w: 200px, $h: 58px, $hw: 220px, $hh: 68px);
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
