@@ -62,10 +62,10 @@ export class PortfolioDataService {
     {
       name: 'Join',
       img: 'join.png',
-      used_skills: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
+      used_skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      link: 'hier kommt das link',
-      github_link: 'hier kommt das githublink'
+      link: 'https://f0169385@join-193.developerakademie.net/log_in.html',
+      github_link: 'http://sharkie.csaba-miska.net/'
     },
     {
       name: 'Sharkie',
