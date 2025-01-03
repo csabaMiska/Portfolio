@@ -1,16 +1,16 @@
-<footer>
-    <div>
+<footer [ngClass]="{'center': isImpressumPage}">
+    <div *ngIf="!isImpressumPage">
         <h1>Csaba</h1>
-        <a href="link to impressum">Impressum</a>
+        <a href="impressum" target="_blank">Impressum</a>
     </div>
 
     <span>&copy; Csaba Miska 2025</span>
 
-    <nav>
+    <nav *ngIf="!isImpressumPage">
         <a href=""><img src="./assets/img/logos/github.png" alt="git"></a>
         <a href=""><img src="./assets/img/logos/mail.png" alt="mail"></a>
         <a href=""><img src="./assets/img/logos/in.png" alt="in"></a>
     </nav>
 
-    <a href="link to impressum" class="impressum_mobile">Impressum</a>
+    <a *ngIf="!isImpressumPage" href="impressum" target="_blank" class="impressum_mobile">Impressum</a>
 </footer>
