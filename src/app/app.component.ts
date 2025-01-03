@@ -17,11 +17,12 @@ import { FooterComponent } from './shared/footer/footer.component';
 export class AppComponent {
   title = 'csaba-miska-developer';
 
-  isImpressumPage: boolean = false;
+  isImPrintedPage: boolean = false;
 
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
-      this.isImpressumPage = this.router.url.includes('/impressum');
+      this.isImPrintedPage = this.router.url.includes('/impressum');
+      this.isImPrintedPage = this.router.url.includes('/privacypolicy');
     });
   }
 }

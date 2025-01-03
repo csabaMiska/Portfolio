@@ -1,7 +1,7 @@
 <header>
     <a href="#landingPage"><h1>Csaba</h1></a>
-    <div *ngIf="!isImpressumPage" (click)="toggleMenu()" [ngClass]="{'menu_btn': !showMobileMenu, 'menu_close_btn': showMobileMenu}"></div>
-    <nav *ngIf="!isImpressumPage" (click)="toggleMenu()" [ngClass]="{'menu_animation_in': showMobileMenu, 'menu_animation_out': !showMobileMenu}">
+    <div *ngIf="!isImPrintedPage" (click)="toggleMenu()" [ngClass]="{'menu_btn': !showMobileMenu, 'menu_close_btn': showMobileMenu}"></div>
+    <nav *ngIf="!isImPrintedPage" (click)="toggleMenu()" [ngClass]="{'menu_animation_in': showMobileMenu, 'menu_animation_out': !showMobileMenu}">
         <a href="#aboutMe">About me</a>
         <a href="#mySkills">Skills</a>
         <a href="#portfolio">Portfolio</a>

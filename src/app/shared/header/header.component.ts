@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  @Input() isImpressumPage: boolean = false;
+  @Input() isImPrintedPage: boolean = false;
   showMobileMenu:boolean;
 
   constructor( ) {
