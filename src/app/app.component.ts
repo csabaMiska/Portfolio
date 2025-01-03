@@ -21,8 +21,7 @@ export class AppComponent {
 
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
-      this.isImPrintedPage = this.router.url.includes('/impressum');
-      this.isImPrintedPage = this.router.url.includes('/privacypolicy');
+      this.isImPrintedPage = this.router.url.includes('/impressum') || this.router.url.includes('/privacypolicy');
     });
   }
 }

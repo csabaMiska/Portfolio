@@ -9,8 +9,7 @@
     padding-top: 108px;
 
     @media (max-width: 1010px) {
-        padding-bottom: 108px;;
-
+        padding-bottom: 150px;
     }
 }
 
@@ -102,7 +101,7 @@
     max-width: $max_width;
     width: $full_width;
     position: absolute;
-    z-index: 600;
+    z-index: 400;
 }
 
 .purple_shadow {

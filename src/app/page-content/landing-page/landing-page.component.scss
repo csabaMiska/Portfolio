@@ -6,6 +6,10 @@
     max-height: 911px;
     padding-top: 109px;
     background-color: $dark_blue;
+
+    @media (max-width: 1010px) {
+       padding-bottom: 105px;
+    }
 }
 
 .hero_container {
@@ -119,7 +123,7 @@
             @media (max-width: 1185px) {
                 width: 500px;
                 height: 625px;
-            }            
+            }
 
             @media (max-width: 1010px) {
                 width: 400px;
@@ -136,7 +140,7 @@
                 height: 340px;
             }
         }
-    
+
         .profile_cut {
             position: absolute;
             top: 618px;
@@ -151,7 +155,7 @@
             @media (max-width: 1185px) {
                 width: 500px;
                 top: 561px;
-            } 
+            }
 
             @media (max-width: 1010px) {
                 width: 400px;
@@ -173,9 +177,9 @@
 
 .hero_title_container {
     @include dFlex($jc: start, $ai: end, $fd: column);
-    height: 911px;
+    height: fit-content;
     width: 70%;
-    padding-top: 188px;
+    margin-top: -240px;
     margin-left: -160px;
     margin-right: 100px;
 
@@ -185,14 +189,13 @@
 
     @media (max-width: 1010px) {
         justify-content: end;
-        height: fit-content;
         width: 100%;
         align-items: center;
-        padding-top: 32px;
+        margin-top: 30px;
         margin-left: 0;
         margin-right: 0;
         position: relative;
-        z-index: 500;
+        z-index: 1200;
     }
 
     .hero_title {
@@ -254,7 +257,7 @@
         @media (max-width: 480px) {
             margin-top: -20px;
         }
-        
+
         @media (max-width: 390px) {
             margin-top: -16px;
         }
@@ -263,15 +266,13 @@
 }
 
 .hero_btn_container {
-    @include dFlex();
+    @include dFlex($ai: start);
     width: 100%;
+    height: 80px;
     margin-top: 44px;
-    position: relative;
-    z-index: 500;
 
     @media (max-width: 1010px) {
         margin-top: 20px;
-        margin-bottom: 120px;
     }
 
     a {
@@ -300,7 +301,6 @@
     width: $full_width;
     max-width: $max_width;
     top: 388px;
-    z-index: 300;
     background-image: url('../../../assets/img/desing_elements/vector_landing_page.png');
     background-repeat: no-repeat;
 
@@ -309,7 +309,7 @@
     }
 
     @media (max-width: 1185px) {
-       top: 300px;
+        top: 300px;
     }
 
     @media (max-width: 1010px) {
@@ -331,7 +331,10 @@ nav {
     @include dFlex();
     gap: 42px;
     padding-bottom: 120px;
-    
+    height: 50px;
+    position: relative;
+    z-index: 800;
+
     div {
         @include lineDesign($lw: 100px, $lh: 4px, $lc: $purple);
 
@@ -359,7 +362,7 @@ nav {
 
     @media (max-width: 1185px) {
         padding-bottom: 40px;
-     }
+    }
 
     @media (max-width: 1010px) {
         padding-bottom: 0;
@@ -367,7 +370,7 @@ nav {
 
         .email {
             display: none;
-        } 
+        }
     }
 
     @media (max-width: 600px) {
@@ -398,6 +401,7 @@ nav {
     padding-bottom: 120px;
     position: relative;
     z-index: 1200;
+
     span {
         @include dFlex();
         @include fontStyle($fs: 23px, $fw: 400, $fc: $white);
@@ -413,7 +417,7 @@ nav {
 
     @media (max-width: 1185px) {
         padding-bottom: 40px;
-     }
+    }
 
     @media (max-width: 1010px) {
         display: none;

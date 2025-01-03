@@ -65,7 +65,7 @@ export class PortfolioDataService {
       used_skills: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       link: 'https://f0169385@join-193.developerakademie.net/log_in.html',
-      github_link: 'http://sharkie.csaba-miska.net/'
+      github_link: 'https://github.com/csabaMiska'
     },
     {
       name: 'Sharkie',
