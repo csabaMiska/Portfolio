@@ -1,16 +1,16 @@
-<footer [ngClass]="{'center': isImPrintedPage}">
-    <div *ngIf="!isImPrintedPage">
+<footer>
+    <div>
         <h1>Csaba</h1>
         <a href="impressum" target="_blank">Impressum</a>
     </div>
 
     <span>&copy; Csaba Miska 2025</span>
 
-    <nav *ngIf="!isImPrintedPage">
+    <nav>
         <a href="https://github.com/csabaMiska" target="blank"><img src="./assets/img/logos/github.png" alt="git"></a>
         <a href="mailto:miskacs90@icloud.com?subject=Hallo%20Csaba&body=Ich%20möchte%20mit%20dir%20Kontakt%20aufnehmen."><img src="./assets/img/logos/mail.png" alt="mail"></a>
         <a href=""><img src="./assets/img/logos/in.png" alt="in"></a>
     </nav>
 
-    <a *ngIf="!isImPrintedPage" href="impressum" target="_blank" class="impressum_mobile">Impressum</a>
+    <a href="impressum" target="_blank" class="impressum_mobile">Impressum</a>
 </footer>

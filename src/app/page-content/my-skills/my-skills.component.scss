@@ -16,7 +16,7 @@
         padding-left: 50px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         @include dFlex($fd: column-reverse);
         padding-left: 0;
     }
@@ -39,7 +39,7 @@
         gap: 50px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         @include dFlex();
         width: 90%;
     }
@@ -69,7 +69,7 @@
         height: 60px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         width: 160px;
     }
 
@@ -99,7 +99,6 @@
         }
     }
 
-
     @media (max-width: 410px) {
         width: 100px;
         height: 80px;
@@ -120,7 +119,7 @@
     height: 50%;
     margin-top: 44px;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         width: 100%;
         height: fit-content;
         margin-bottom: 35px;
@@ -162,7 +161,7 @@
         margin-right: 50px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         @include dFlex($jc: end);
     }
 
@@ -185,6 +184,10 @@
         @media (max-width: 400px) {
             max-width: 95%;
         }
+
+        @media (max-width: 350px) {
+            @include fontStyle($fs: 14px, $fw: 400, $fc: $white);
+        }
     }
 }
 
@@ -196,7 +199,7 @@
     position: relative;
     z-index: 400;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         display: none;
     }
 
@@ -217,7 +220,7 @@
     background-repeat: no-repeat;
     background-position: 0 -100%;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         width: 100%;
     }
 
@@ -255,12 +258,12 @@
     z-index: 400;
     height: 80px;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         display: flex;
         margin-bottom: 270px;
     }
 
-    button {
+    a {
         position: relative;
         z-index: 600;
         @include dFlex();

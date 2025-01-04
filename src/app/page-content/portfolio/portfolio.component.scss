@@ -71,7 +71,7 @@
         margin-right: 50px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         padding-bottom: 80px;
     }
 
@@ -83,6 +83,10 @@
     span {
         @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
         text-align: center;
+
+        @media (max-width: 350px) {
+            @include fontStyle($fs: 14px, $fw: 400, $fc: $white);
+        }
     }
 }
 
@@ -99,7 +103,7 @@
         margin-right: 50px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         gap: 80px;
         padding-bottom: 110px;
     }
@@ -140,7 +144,7 @@
         }
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         @include dFlex($fd: column);
         width: fit-content;
 
@@ -183,13 +187,21 @@
             @include dFlex();
             flex-wrap: wrap;
         }
+
+        @media (max-width: 350px) {
+            @include fontStyle($fs: 19px, $fw: 400, $fc: $green);
+        }
     }
 
     .project_description {
         @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
+
+        @media (max-width: 350px) {
+            @include fontStyle($fs: 14px, $fw: 400, $fc: $white);
+        }
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         @include dFlex($fd: column, $ai: center);
         margin-right: 0;
 
@@ -225,12 +237,13 @@
 
     @media (max-width: 440px) {
         gap: 25px;
+
         .live_test_btn {
             @include dFlex();
             @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
             @include secondaryBtn ($w: 72px, $h: 34px, $bc: $purple, $hbc: $green, $b: none);
         }
-    
+
         .github_btn {
             @include dFlex();
             @include fontStyle($fs: 16px, $fw: 400, $fc: $white);
@@ -250,7 +263,7 @@
     height: 100%;
     max-height: 1600px;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         background-position: 0 50%;
     }
 
@@ -301,7 +314,7 @@
         text-align: right;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1023px) {
         align-items: center;
         margin-left: 0;
 
@@ -310,8 +323,6 @@
         }
     }
 }
-
-
 
 .direction_column {
     flex-direction: column;

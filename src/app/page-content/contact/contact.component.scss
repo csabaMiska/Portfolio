@@ -6,7 +6,7 @@
     background-color: $dark_blue;
     padding-bottom: 90px;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         padding-bottom: 60px;
     }
 
@@ -35,7 +35,7 @@
 
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         padding-bottom: 45px;
     }
 
@@ -59,7 +59,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         max-height: 600px;
         margin-top: -300px;
     }
@@ -83,7 +83,7 @@
         margin-right: 50px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         @include dFlex($fd: column, $ai: start);
     }
 
@@ -133,7 +133,7 @@
         margin-right: 24px;
     }
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         width: fit-content;
         height: fit-content;
         margin-bottom: 45px;
@@ -148,7 +148,7 @@
     @include dFlex($fd: column, $ai: end);
     width: 50%;
 
-    @media (max-width: 1010px) {
+    @media (max-width: 1024px) {
         width: 100%;
         height: fit-content;
         align-items: center;
