@@ -89,7 +89,7 @@ nav {
     gap: 42px;
 
     img {
-        @include navLinkImg();
+        @include navLinkImg($w: 30px);
     }
 
     @media (max-width: 1100px) {

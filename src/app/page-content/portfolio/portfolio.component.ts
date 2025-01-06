@@ -18,7 +18,7 @@ export class PortfolioComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver
-      .observe(['(max-width: 1010px)'])
+      .observe(['(max-width: 1024px)'])
       .subscribe(result => {
         this.mobilViewOn = result.matches;
       });

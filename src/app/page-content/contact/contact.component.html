@@ -11,6 +11,7 @@
             <p>Need a Frontend developer?<br> <b>Contact me!</b></p>
         </div>
         <div class="contact_form">
+            <app-contact-messagebox [@showHide]="messageBoxState" class="box"></app-contact-messagebox>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="input_container">
                     <input #name="ngModel" [(ngModel)]="contactData.name"

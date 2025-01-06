@@ -147,6 +147,7 @@
 .contact_form {
     @include dFlex($fd: column, $ai: end);
     width: 50%;
+    height: 100%;
 
     @media (max-width: 1024px) {
         width: 100%;
@@ -300,4 +301,20 @@
 
 .input_invalied {
     border: 1px solid $red !important;
+}
+
+.box {
+    @include dFlex();
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+    max-width: 590px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: $green;
+    
+    @media (max-width: 1024px) {
+        height: 70%;
+        width: 100%;
+    }
 }

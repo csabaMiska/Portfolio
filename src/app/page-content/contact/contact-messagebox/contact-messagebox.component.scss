@@ -1,0 +1,9 @@
+@use '../../../../mixins.scss' as *;
+
+.contact_message_box {
+    text-align: center;
+
+    h2 {
+        color: white !important;
+    }
+}

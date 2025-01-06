@@ -5,7 +5,13 @@
     max-width: $max_width;
     width: $full_width;
     background-color: $dark_blue;
-    padding-bottom: 200px;
+    padding-bottom: 120px;
+    padding-top: 120px;
+
+    @media (max-width: 1024px) {
+        padding-bottom: 75px;
+        padding-top: 75px;
+    }
 }
 
 .my_skills_container {

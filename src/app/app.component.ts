@@ -15,7 +15,7 @@ import { FooterComponent } from './shared/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'csaba-miska-developer';
+  title = 'csaba-miska';
 
   isImPrintedPage: boolean = false;
 
