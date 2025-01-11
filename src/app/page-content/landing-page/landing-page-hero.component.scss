@@ -1,0 +1,230 @@
+@use '../../../mixins.scss' as *;
+
+.landing_page_img_container {
+    @include dFlex();
+    height: 100vh;
+    width: 70%;
+
+    @media (max-width: 1024px) {
+        @include dFlex($ai: end);
+        width: 100%;
+        height: 60%;
+    }
+}
+
+.landing_page_img {
+    @include dFlex($ai: end);
+    width: 100%;
+    height: 705px;
+    background-image: url('../../../assets/img/desing_elements/landing_page_shadow.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 20% 20%;
+
+    .profile_img {
+        width: 606px;
+        height: 705px;
+    }
+
+    .profile_img_cut {
+        position: absolute;
+        z-index: 500;
+        width: 606px;
+        padding-bottom: 8px;
+    }
+
+    @media (max-width: 500px) or (min-height: 667px) {
+        height: 349px;
+        background-size: 100%;
+
+        .profile_img {
+            width: 300px;
+            height: 349px;
+        }
+
+        .profile_img_cut {
+            width: 300px;
+        }
+    }
+
+    @media (min-height: 340px) and (max-height: 430px) {
+        height: 232.67px;
+        background-size: 70%;
+        margin-bottom: -13px;
+        background-position: 50% 0;
+
+        .profile_img {
+            width: 200px;
+            height: 232.67px;
+        }
+
+        .profile_img_cut {
+            width: 200px;
+            padding-bottom: 6px;
+        }
+    }
+
+    @media (min-height: 431px) and (max-height: 667px) {
+        height: 349px;
+        background-size: 100%;
+
+        .profile_img {
+            width: 300px;
+            height: 349px;
+        }
+
+        .profile_img_cut {
+            width: 300px;
+        }
+    }
+
+    @media (min-height: 668px) and (max-height: 915px) {
+        height: 349px;
+        background-size: 100%;
+        background-position: 50% 0;
+
+        .profile_img {
+            width: 300px;
+            height: 349px;
+        }
+
+        .profile_img_cut {
+            width: 300px;
+        }
+    }
+
+    @media (min-height: 916px) and (max-height: 932px) {
+        height: 349px;
+        background-size: 100%;
+        background-position: 50% 0;
+
+        .profile_img {
+            width: 300px;
+            height: 349px;
+        }
+
+        .profile_img_cut {
+            width: 300px;
+        }
+    }
+
+    @media (min-height: 933px) and (max-height: 1180px) {
+        height: 581px;
+        background-size: 90%;
+        background-position: 50% 8%;
+
+        .profile_img {
+            width: 500px;
+            height: 581px;
+        }
+
+        .profile_img_cut {
+            width: 500px;
+        }
+    }
+
+    @media (min-height: 1181px) and (max-height: 1440px) {
+        height: 705px;
+        background-size: 80%;
+        background-position: 50% 10%;
+
+        .profile_img {
+            width: 606px;
+            height: 705px;
+        }
+
+        .profile_img_cut {
+            position: absolute;
+            z-index: 500;
+            width: 606px;
+            padding-bottom: 16px;
+        }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1024px) {
+        height: 349px;
+        background-size: 50%;
+        background-position: 50% 10%;
+
+        .profile_img {
+            width: 300px;
+            height: 349px;
+        }
+
+        .profile_img_cut {
+            width: 300px;
+        }
+    }
+
+    @media (min-height: 1366px) {
+        height: 581px;
+        background-size: 90%;
+        background-position: 50% 8%;
+
+        .profile_img {
+            width: 500px;
+            height: 581px;
+        }
+
+        .profile_img_cut {
+            width: 500px;
+        }
+    }
+
+    @media (min-width: 435px) and (max-width: 1024px) {
+        background-size: 60%;
+        background-position: 50% 0;
+    }
+
+    @media (min-width: 1025px) and (max-width: 1149px) {
+        height: 465px;
+
+
+        .profile_img {
+            width: 400px;
+            height: 465px;
+        }
+
+        .profile_img_cut {
+            width: 400px;
+        }
+    }
+
+    @media (min-width: 1150px) and (max-width: 1280px) {
+        height: 600px;
+        background-size: 100%;
+        background-position: 50% 20%;
+        margin-bottom: 20px;
+
+        .profile_img {
+            width: 515.32px;
+            height: 600px;
+        }
+
+        .profile_img_cut {
+            width: 515.32px;
+        }
+    }
+
+    @media (min-width: 1281px) {
+        @include dFlex($ai: end);
+        width: 100%;
+        height: 705px;
+        background-image: url('../../../assets/img/desing_elements/landing_page_shadow.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 20% 20%;
+
+        .profile_img {
+            width: 606px;
+            height: 705px;
+        }
+
+        .profile_img_cut {
+            position: absolute;
+            z-index: 500;
+            width: 606px;
+            padding-bottom: 16px;
+        }
+    }
+}

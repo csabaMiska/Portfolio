@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+  styleUrls: ['./landing-page.component.scss', './landing-page-hero.component.scss', './landing-page-titel.component.scss']
 })
 export class LandingPageComponent {
 
